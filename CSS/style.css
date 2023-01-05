@@ -9,9 +9,12 @@
     flex: 1 1 80px;
     border: 1px solid black;
 } */
+body{
+    background: radial-gradient(ellipse at center, #7c7c7c, #000000);
+    background: -webkit-radial-gradient(ellipse at center, #7c7c7c, #000000);
+}
 
 body, main{
-    background-color: #283149;
     height: 100vh;
     text-align: center;
     font-family: 'Montserrat Alternates';
@@ -53,16 +56,17 @@ h1{
 }
 
 .calc-container{
-    background-color: #fff;
+    background: #353535;
     margin: 100px auto 0;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px 10px rgba(0,0,0,0.7);
+    box-shadow: 0 6px 0 #a1a1a1, 0 8px 10px rgba(0,0,0);
     justify-content: space-between;
     height: fit-content;
     width: 40%;
-    padding: 20px;
+    padding: 20px 20px 0;
     border: 1px solid black;
+    border-radius: 1%;
 }
 
 @media (max-width: 426px){
@@ -88,13 +92,16 @@ h1{
 
 .input{
     overflow: auto;
+    padding: 0 20px;
+    background-color: #cecfac;
+    color: black;
+    box-shadow: inset 0 0 8px rgba(0,0,0);
 }
 
 .input-container{
     box-sizing: border-box;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 3.5rem;    
-    border: 2px solid #ccc;
     text-align: right;
 }
 
@@ -119,7 +126,9 @@ h1{
     justify-content: center;
     margin: 10px 0;
     border: 2px solid #666;
-    background-color: #bbb;
+    background-color: rgb(122, 117, 117);
+    border-radius: 7%;
+    box-shadow: 0 6px 0 #e1e1e1;
     font-weight:500;
     font-size: 2rem; 
     height: 40px;
@@ -135,7 +144,7 @@ h1{
 }
 
 .numbers > button{
-    flex: 1 1 40px;
+    flex: 1 0 40px;
     width: 23.2%;
     display: flex;
     margin: 0 auto 10px;
@@ -144,25 +153,30 @@ h1{
     font-weight:900;
     font-size: 2rem; 
     border: 2px solid #666;
-    background-color: #eee;
+    border-radius: 7%;
+    background-color: rgb(122, 117, 117);
+    box-shadow: 0 6px 0 #e1e1e1;
     cursor: pointer;    
 }
 
 .numbers > button.next{
-    flex: 0 1 auto;
+    flex: 0 0 40px;
 }
 
 .numbers > button.backspace{
-    flex: 0 1 auto;
+    flex: 0 0 40px;
 }
 
 .operators button:hover{
+    background-color: #ddd;
     box-shadow: 0 0 3px 3px rgba(0,0,0,0.2);
+    /* box-shadow: 0 6px 0 #e1e1e1; */
 }
 
 .numbers button:hover{
     background-color: #ddd;
     box-shadow: 0 0 3px 3px rgba(0,0,0,0.2);
+    /* box-shadow: 0 6px 0 #e1e1e1; */
 }
 
 .numbers button:last-child{
@@ -171,4 +185,11 @@ h1{
 
 .numbers button:last-child:hover{
     background-color: rgba(0, 17, 255, 0.8);
+}
+
+.footer{
+    color: white;
+    text-align: right;
+    padding: 5px 0 10px;
+    font-size: 0.8rem;
 }
