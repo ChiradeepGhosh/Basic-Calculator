@@ -1,0 +1,166 @@
+/* .numbers {
+    height: 400px;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.numbers > * {
+    flex: 1 1 80px;
+    border: 1px solid black;
+} */
+
+body, main{
+    background-color: #283149;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Montserrat Alternates';
+}
+
+@keyframes heading {
+    25%{
+        color: #8c1515;
+        text-shadow: 7px 7px 10px blue;
+    }
+
+    50%{
+        color: yellow;
+        text-shadow: 7px 7px 10px green;
+    }
+
+    75%{
+        color: purple;
+        text-shadow: 7px 7px 10px white;
+    }
+    100%{
+        color: green;
+        text-shadow: 7px 7px 10px purple;
+    }
+}
+
+
+h1{
+    font-family: 'Arvo',serif;
+    text-shadow: 7px 7px 10px #DA0463;
+    font-size: 4rem;
+    color: white;
+
+    animation-name: heading;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.calc-container{
+    background-color: #fff;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.7);
+    justify-content: space-between;
+    height: fit-content;
+    width: 40%;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+@media (max-width: 426px){
+    .calc-container{
+        width: auto;
+        margin: 100px 20px;
+    }
+}
+
+@media (max-width: 769px) and (min-width: 427px){
+    .calc-container{
+        width: 80%;
+        margin: 100px auto;
+    }
+}
+
+@media (max-width: 1025px) and (min-width:770px){
+    .calc-container{
+        width: 60%;
+        margin: 100px auto;
+    }
+}
+
+.input{
+    overflow: auto;
+}
+
+.input-container{
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 3.5rem;    
+    border: 2px solid #ccc;
+    text-align: right;
+}
+
+.dialer-container{
+    box-sizing: border-box;
+    flex: 0 1 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.operators{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.operators > *{
+    flex: 0 1 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    border: 2px solid #666;
+    background-color: #bbb;
+    font-weight:500;
+    font-size: 2rem; 
+    height: 40px;
+    cursor: pointer;
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
+    flex-wrap: wrap;
+    height: 250px;
+}
+
+.numbers > button{
+    flex: 1 0 40px;
+    width: 23.2%;
+    display: flex;
+    margin: 0 auto 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight:900;
+    font-size: 2rem; 
+    border: 2px solid #666;
+    background-color: #eee;
+    cursor: pointer;    
+}
+
+.operators button:hover{
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.2);
+}
+
+.numbers button:hover{
+    background-color: #ddd;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.2);
+}
+
+.numbers button:last-child{
+    background-color: #307CF9;
+}
+
+.numbers button:last-child:hover{
+    background-color: rgba(0, 17, 255, 0.8);
+}
