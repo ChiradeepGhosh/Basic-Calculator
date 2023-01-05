@@ -135,7 +135,7 @@ h1{
 }
 
 .numbers > button{
-    flex: 1 0 40px;
+    flex: 1 1 40px;
     width: 23.2%;
     display: flex;
     margin: 0 auto 10px;
@@ -146,6 +146,14 @@ h1{
     border: 2px solid #666;
     background-color: #eee;
     cursor: pointer;    
+}
+
+.numbers > button.next{
+    flex: 0 1 auto;
+}
+
+.numbers > button.backspace{
+    flex: 0 1 auto;
 }
 
 .operators button:hover{

@@ -8,9 +8,10 @@ var isAnswerPrinted = false;
 
 // Buttons List
 var listOfButtons = [];
-for (var i = 0; i < buttonsVal.length; i++) {
+for (var i = 0; i < numBtns.length; i++) {
     listOfButtons.push(buttonsVal[i].textContent);
 }
+console.log(listOfButtons);
 
 
 // Add EventListeners for All Buttons
@@ -76,11 +77,16 @@ function clearAll() {
 // BackSpace one Character one by one
 document.addEventListener("keydown", function(event){
     if(event.key == "Backspace"){
-        erase(event.key);
+        erase();
     }
 })
 
-function erase(key){
+
+// Erasing one Character one by one
+document.querySelector(".backspace").addEventListener("click", function(){
+    erase();
+})
+function erase(){
     
     if(input.innerHTML.length == 1){
         input.innerHTML = "0";
@@ -105,6 +111,7 @@ document.addEventListener("keydown", function(event){
     }
 })
 
+// Basic Calculation Functions
 // Main Calculation Function
 function calculate() {
 
